@@ -1,0 +1,171 @@
+/** 
+Estilo para layout com aparência semelhante ao Windows Phone, adaptado para celular (mobile)
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #262626;
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  background: #0078d7;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: #bfdfff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  background: #005fa3;
+  color: #fff;
+}
+
+main {
+  max-width: 430px;
+  margin: 24px auto;
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 24px 16px;
+  box-shadow: 0 3px 18px rgba(0,0,0,0.12);
+}
+
+section h2 {
+  color: #0078d7;
+  margin-top: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+section p, section ul {
+  color: #f5f5f5;
+  margin: 14px 0;
+  font-size: 1rem;
+}
+
+section ul {
+  padding-left: 18px;
+}
+
+section ul li {
+  margin-bottom: 7px;
+  padding-left: 0.5em;
+  position: relative;
+}
+
+section ul li::before {
+  content: "■";
+  color: #0078d7;
+  margin-right: 5px;
+  font-size: 0.85em;
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 24px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.22s;
+}
+
+.btn:hover, .btn:focus {
+  background: #005fa3;
+}
+
+footer {
+  background: #181818;
+  color: #bfc9d1;
+  text-align: center;
+  padding: 16px 6px;
+  font-size: 0.92rem;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 98vw;
+    margin: 10px auto;
+    padding: 18px 4vw;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  section h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Simula blocos/tiles estilo Windows Phone para elementos .tile */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+.tile {
+  background: #0078d7;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  padding: 26px 0 18px 0;
+  font-size: 1.2rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.tile:hover, .tile:focus {
+  background: #005fa3;
+}
+
+/* Scrollbar cor Windows Phone */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #191919;
+}
+::-webkit-scrollbar-thumb {
+  background: #333a41;
+  border-radius: 4px;
+}
