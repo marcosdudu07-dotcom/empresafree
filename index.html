@@ -2,45 +2,70 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
   <title>EmpresaFree - ERP Free</title>
+  <meta name="description" content="Sistema ERP Gratuito para gestão de negócios, funcionando offline e online.">
   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f172a">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
   <header>
-    <h1>Bem-vindo ao EmpresaFree</h1>
-    <nav>
-      <ul>
-        <li><a href="login.html">Login</a></li>
-        
-      </ul>
-    </nav>
+    <div class="container header-content">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Empresa<span>Free</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="login.html" class="btn" style="padding: 8px 16px;">Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Sistema ERP Gratuito</h2>
-      <p>Controle o seu negócio com simplicidade, eficiência e de forma gratuita!</p>
-      <ul>
-        <li>Gestão de Estoque</li>
-        <li>Financeiro</li>
-        <li>Clientes e Fornecedores</li>
-        <li>Emissão de Relatórios</li>
-        <li>Multi-plataforma e fácil de usar</li>
-      </ul>
-      <a href="login.html" class="btn">Acesse agora</a>
-    </section>
+  <main class="hero">
+    <div class="container animate-in">
+      <div class="hero-content">
+        <h1>O ERP Gratuito e Inteligente</h1>
+        <p>Controle financeiro, estoque, clientes e fornecedores. Funciona no Windows, Android e iPhone com suporte offline absoluto.</p>
+        <a href="login.html" class="btn">Acessar Sistema Grátis</a>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">📦</div>
+          <h3>Gestão de Estoque</h3>
+          <p style="color:var(--text-muted); margin-top:8px;">Tenha sempre o controle do que entra e sai, de forma fácil e automatizada.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">📊</div>
+          <h3>Financeiro Completo</h3>
+          <p style="color:var(--text-muted); margin-top:8px;">Contas a pagar, a receber e fluxo de caixa organizado em um só lugar.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <div class="feature-icon">🚀</div>
+          <h3>Multi-plataforma e Offline</h3>
+          <p style="color:var(--text-muted); margin-top:8px;">Acesse no PC, Android ou iPhone. Funciona perfeitamente mesmo sem internet, sincronizando depois.</p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2024 EmpresaFree. Todos os direitos reservados.</p>
+    <div class="container">
+      <p>&copy; 2024 EmpresaFree. Todos os direitos reservados.</p>
+    </div>
   </footer>
   
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('sw.js');
+        navigator.serviceWorker.register('sw.js').then(reg => {
+          console.log('SW registrado com sucesso!', reg);
+        }).catch(err => {
+          console.error('Falha ao registrar SW', err);
+        });
       });
     }
   </script>
