@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - EmpresaFree</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+    }
+
+    /* HEADER */
+    .topo {
+      background: #0078d7;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topo h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .usuario {
+      font-size: 14px;
+    }
+
+    .usuario span {
+      font-weight: bold;
+    }
+
+    .logout {
+      margin-left: 10px;
+      padding: 6px 10px;
+      background: #005fa3;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* MENU */
+    .container {
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: #f0f8ff;
+    }
+
+    .card h3 {
+      margin: 10px 0 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .icon {
+      font-size: 30px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .topo h1 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPO -->
+  <div class="topo">
+    <h1>EmpresaFree</h1>
+    <div class="usuario">
+      Olá, <span id="nomeUsuario">Usuário</span>
+      <button class="logout" onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <div class="container">
+    <div class="grid">
+
+      <!-- Menu principal Cadastro com submenus -->
+      <div class="card" style="position:relative;">
+        <div class="icon">👥</div>
+        <h3>Cadastro</h3>
+        <div style="margin-top:18px; padding:0; text-align:left;">
+          <div class="card" style="background: #f8fbff; border-radius:7px; box-shadow:none; padding:11px 16px; margin-bottom:7px; cursor:pointer;" onclick="abrir('clientes.html')">
+            <span style="font-size:18px; margin-right:8px;">🧑</span> Cliente
+          </div>
+          <div class="card" style="background: #f8fbff; border-radius:7px; box-shadow:none; padding:11px 16px; margin-bottom:7px; cursor:pointer;" onclick="abrir('produtos.html')">
+            <span style="font-size:18px; margin-right:8px;">📦</span> Produto
+          </div>
+          <div class="card" style="background: #f8fbff; border-radius:7px; box-shadow:none; padding:11px 16px; margin-bottom:7px; cursor:pointer;" onclick="abrir('fornecedores.html')">
+            <span style="font-size:18px; margin-right:8px;">🏢</span> Fornecedor
+          </div>
+          <div class="card" style="background: #f8fbff; border-radius:7px; box-shadow:none; padding:11px 16px; cursor:pointer;" onclick="abrir('usuarios.html')">
+            <span style="font-size:18px; margin-right:8px;">👤</span> Usuário
+          </div>
+        </div>
+      </div>
+
+      <div class="card" onclick="abrir('orcamento.html')">
+        <div class="icon">📝</div>
+        <h3>Orçamento</h3>
+      </div>
+
+      <div class="card" onclick="abrir('vendas.html')">
+        <div class="icon">💰</div>
+        <h3>Vendas</h3>
+      </div>
+
+      <div class="card" onclick="abrir('financeiro.html')">
+        <div class="icon">📊</div>
+        <h3>Financeiro</h3>
+      </div>
+
+      <div class="card" onclick="abrir('relatorios.html')">
+        <div class="icon">📈</div>
+        <h3>Relatórios</h3>
+      </div>
+
+      <div class="card" onclick="abrir('configuracoes.html')">
+        <div class="icon">⚙️</div>
+        <h3>Configurações</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="js/menu.js"></script>
+
+</body>
+</html>
