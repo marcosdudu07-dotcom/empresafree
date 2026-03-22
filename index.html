@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>EmpresaFree - ERP Free</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo ao EmpresaFree</h1>
+    <nav>
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="app.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sistema ERP Gratuito</h2>
+      <p>Controle o seu negócio com simplicidade, eficiência e de forma gratuita!</p>
+      <ul>
+        <li>Gestão de Estoque</li>
+        <li>Financeiro</li>
+        <li>Clientes e Fornecedores</li>
+        <li>Emissão de Relatórios</li>
+        <li>Multi-plataforma e fácil de usar</li>
+      </ul>
+      <a href="login.html" class="btn">Acesse agora</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 EmpresaFree. Todos os direitos reservados.</p>
+  </footer>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
